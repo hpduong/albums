@@ -10,7 +10,6 @@ import Header from './src/components/header';
 const App = () => {
   return (
     <View>
-      <Text> Hello World, Henry</Text>
       <Header></Header>
     </View>
   );
