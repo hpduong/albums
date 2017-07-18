@@ -3,13 +3,16 @@
 
 // 1. Import a library to help create a Component
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
-
+import { Text, AppRegistry, View } from 'react-native';
+import Header from './src/components/header';
 
 // 2. create Component - js function that can be placed on mobile screen of device
 const App = () => {
   return (
-    <Text> Hello World, Henry</Text>
+    <View>
+      <Text> Hello World, Henry</Text>
+      <Header></Header>
+    </View>
   );
 };
 
