@@ -5,12 +5,15 @@
 import React from 'react';
 import { Text, AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
+
 
 // 2. create Component - js function that can be placed on mobile screen of device
 const App = () => {
   return (
     <View>
-      <Header></Header>
+      <Header headerText={'Albums'}/>
+      <AlbumList />
     </View>
   );
 };
