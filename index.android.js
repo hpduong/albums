@@ -11,7 +11,7 @@ import AlbumList from './src/components/AlbumList';
 // 2. create Component - js function that can be placed on mobile screen of device
 const App = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header headerText={'Albums'}/>
       <AlbumList />
     </View>

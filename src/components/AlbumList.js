@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component { // this is a Dynamic Class Component vs Statis Functional Component
@@ -20,10 +20,10 @@ class AlbumList extends Component { // this is a Dynamic Class Component vs Stat
   render() {
     console.log(this.state);
 
-    return (
-      <View>
+    return (        //make scrollable albumDetail is all inside this - must add style property of root view flex 1 for proper scrolling
+      <ScrollView>
         {this.renderAlbums()}
-        </View>
+        </ScrollView>
       );
     }
   }
