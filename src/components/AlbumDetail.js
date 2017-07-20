@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, ScrollView } from 'react-native';
+import { Text, View, Image, ScrollView, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -7,7 +7,7 @@ import Button from './Button';
 //function component just to display the already pulled data from AlbumList.js
 
 const AlbumDetail = ( {album} ) => {
-  const { title, artist, thumbnail_image, image, } = album; //destructure from album
+  const { title, artist, thumbnail_image, image, url } = album; //destructure from album
   const {
     thumbnailStyle,
     headerContentStyle,
@@ -37,7 +37,9 @@ const AlbumDetail = ( {album} ) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button onPress={() => Linking.openURL(url)}>
+        Buy Now
+        </Button>
       </CardSection>
 
     </Card>
